@@ -49,6 +49,8 @@ public class MoltenGlassPlugin extends Plugin
 	protected void startUp() throws Exception
 	{
 		log.info("Molten Glass Tracker started!");
+		moltenGlassCount = 0;
+		moltenGlassStartTime = 0;
 		overlayManager.add(overlay);
 	}
 
@@ -56,6 +58,8 @@ public class MoltenGlassPlugin extends Plugin
 	protected void shutDown() throws Exception
 	{
 		log.info("Molten Glass Tracker stopped!");
+		moltenGlassCount = 0;
+		moltenGlassStartTime = 0;
 		overlayManager.remove(overlay);
 	}
 
